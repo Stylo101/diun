@@ -97,9 +97,9 @@ func (c *Client) Send(entry model.NotifEntry) error {
 
 	dataBuf := new(bytes.Buffer)
 	if err := json.NewEncoder(dataBuf).Encode(Message{
-		Content:   content.String(),
-		Username:  c.meta.Name,
-		AvatarURL: c.meta.Logo,
+		Content: content.String(),
+		// Username:  c.meta.Name,
+		// AvatarURL: c.meta.Logo,
 		Embeds: []Embed{
 			{
 				Author: EmbedAuthor{
